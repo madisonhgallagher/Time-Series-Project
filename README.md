@@ -34,5 +34,6 @@ grangercausalitytests(df[['Var4', 'Var1']], max_lag, verbose=True)
 
 
 ### Analysis: 
-First, combine your four pollutant's CSVs into one dataframe in a pyhton notebook.
+First, combine your four pollutant's CSVs into one dataframe in a pyhton notebook. The goal of this section is to build a multivariate time series model that will most accurately predict the four pollutant levels for the alst two motnhs of data. Split the data into a test set and a training set. The test set should include the last two months of data. 
+Build multiple TS models and compare their accuracy and then choose the model that best predicts for your dataset. For our dataset we built [ISNERT MODEL TYPES] and compared them using mean average error (MAE), %MAE and accuracy.
 
