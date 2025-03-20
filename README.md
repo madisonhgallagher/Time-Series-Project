@@ -12,7 +12,8 @@ The additional packages installed and utilized were: matplotlib, numpy, statsmod
 We got our data from the EPA, and downloaded each year's worth of data for one pollutant as one CSV file. This meant we had a total of 12 files. 
 
 ## Documentation Map
-[need to do]
+![image](https://github.com/user-attachments/assets/bf78873a-402a-4e0d-b8ba-fa851ac0c64c)
+
 
 
 ## Reproducing Results
