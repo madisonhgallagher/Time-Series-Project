@@ -41,6 +41,17 @@ Build multiple TS models and compare their accuracy and then choose the model th
 When building the model, in order to fine tune the model to your data set you may have to preprocess the data by performing differencing. 
 
 #Building the LSTM
+First scale the data using minmaxscaler. 
+
+EXAMPLE SCALE CODE:
+from sklearn.preprocessing import MinMaxScaler
+scaler = MinMaxScaler(feature_range=(0, 1))
+scaled_train = scaler.fit_transform(train_values)
+scaled_test = scaler.transform(test_values)
+scaled_data = scaler.fit_transform(data_values)
+
+Then create sequences for training and testing. THen build and compile the model. Make predictions and inverse scale the predictions. 
+
 
 #Comparing the models
 We used MAE, %MAE, and accuracy score to compare the performance of the different models. We also plotted the predicted vesus actual for each model and visually inspected the performance of the model. Use the model with the lowest MAE and percent MAE. Percent MAE will account for the range of the varaible. A %MAE below 20% is considered reasonable. Compare the accuracy score of each pollutant using the code below. For this project our goal was to score an accuracy of 80% or above.
