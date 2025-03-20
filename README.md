@@ -68,6 +68,8 @@ range_pm25 = test_df['PM2.5'].max() - test_df['PM2.5'].min()
 #Compute accuracy
 accuracy = (1 - (mae / range_pm25)) * 100
 
+#Creating the output file
+At the bottom of the LSTM file, there is a code section that will output the predictions to a csv file as well as the accuracy score for each pollutant. Run that section in order to screate the output file of the predictions, the actual, and the accuracy score.
 
 
 
