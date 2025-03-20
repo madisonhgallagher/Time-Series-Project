@@ -22,7 +22,7 @@ To gather the data visit the Environmental Protection Agency's website and navig
 
 ### EDA
 Import the 12 CSV files into a python notebook. Join the 3 years worth of each pollutant into one CSV. You will have 4 dataframes with three year's of data each. You will need to find the average value of each pollutant for each recorded date because each collection site will have a unique recorded pollutant level. Use the groupby() and the mean() function to groupby date and then find the mean value of the pollutant. Export the final dataframe to a CSV for further use.
-EDA will also include creating exploratory plots. Plot each pollutant level over time individually and together. Check for correlation and see if you notice any seasonal patterns or trends over time. You can build these plots using plt.plot().
+EDA will also include creating exploratory plots. Plot each pollutant level over time individually and together. This includes finding the average of each pollutant for each month. Check for correlation and see if you notice any seasonal patterns or trends over time. You can build these plots using plt.plot().
 Fianlly, check for relationship between the variables using Granger's Causality Test. This will help with the mutivariate time series analysis by identifying if there are pairwise relationships between the variables. If the p-value is low (< 0.05) at any lag, the first variable Granger-causes the second.
 
 Example Code:
