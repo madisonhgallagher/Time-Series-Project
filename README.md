@@ -36,7 +36,7 @@ grangercausalitytests(df[['Var4', 'Var1']], max_lag, verbose=True)
 
 ### Analysis: 
 
-First, combine your four pollutant's CSVs into one dataframe in a pyhton notebook. The goal of this section is to build a multivariate time series model that will most accurately predict the four pollutant levels for the alst two motnhs of data. Split the data into a test set and a training set. The test set should include the last two months of data. 
+First, combine your four pollutant's CSVs into one dataframe in a pyhton notebook. The goal of this section is to build a multivariate time series model that will most accurately predict the four pollutant levels for the last month of data. Split the data into a test set and a training set. The test set should include the last one month of data. 
 Build multiple TS models and compare their accuracy and then choose the model that best predicts for your dataset. For our models we built a vector auto regression (VAR) model, a Seasonal Autoregressive Integrated Moving-Average with Exogenous Regressors (SARIMAX) model, and a Long Short Term Memory (LSTM) and compared them using mean average error (MAE), %MAE and accuracy of predictions. We selected the LSTM model due to it's high accuracy of predictions as well as it's ability to predict all four pollutants versus one at a time.
 When building the model, in order to fine tune the model to your data set you may have to preprocess the data by performing differencing. 
 
