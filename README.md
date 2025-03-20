@@ -34,6 +34,28 @@ grangercausalitytests(df[['Var4', 'Var1']], max_lag, verbose=True)
 
 
 ### Analysis: 
+
 First, combine your four pollutant's CSVs into one dataframe in a pyhton notebook. The goal of this section is to build a multivariate time series model that will most accurately predict the four pollutant levels for the alst two motnhs of data. Split the data into a test set and a training set. The test set should include the last two months of data. 
-Build multiple TS models and compare their accuracy and then choose the model that best predicts for your dataset. For our dataset we built [ISNERT MODEL TYPES] and compared them using mean average error (MAE), %MAE and accuracy.
+Build multiple TS models and compare their accuracy and then choose the model that best predicts for your dataset. For our models we built a vector auto regression (VAR) model, a Seasonal Autoregressive Integrated Moving-Average with Exogenous Regressors (SARIMAX) model, and a Long Short Term Memory (LSTM) and compared them using mean average error (MAE), %MAE and accuracy of predictions. We selected the LSTM model due to it's high accuracy of predictions as well as it's ability to predict all four pollutants versus one at a time.
+When building the model, in order to fine tune the model to your data set you may have to preprocess the data by performing differencing. 
+
+#Building the LSTM
+
+#Comparing the models
+We used MAE, %MAE, and accuracy score to compare the performance of the different models. We also plotted the predicted vesus actual for each model and visually inspected the performance of the model. Use the model with the lowest MAE and percent MAE. Percent MAE will account for the range of the varaible. A %MAE below 20% is considered reasonable. Compare the accuracy score of each pollutant using the code below. For this project our goal was to score an accuracy of 80% or above.
+
+EXAMPLE MAE CODE:
+#Calculate MAE and MAE % for each pollutant
+for col in df.columns:
+    mae = mean_absolute_error(test_df[col], forecast_df[col])
+    data_range = test_df[col].max() - test_df[col].min()
+
+EXAMPLE ACCURACY SCORE CODE:
+#Get the range of actual values (max - min)
+range_pm25 = test_df['PM2.5'].max() - test_df['PM2.5'].min()
+#Compute accuracy
+accuracy = (1 - (mae / range_pm25)) * 100
+
+
+
 
